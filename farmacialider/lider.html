@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link href='http://fonts.googleapis.com/css?family=Paytone+One' rel='stylesheet' type='text/css'> <link href='http://fonts.googleapis.com/css?family=Paytone+One' rel='stylesheet' type='text/css'> 
+<meta charset="utf-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.16.1/TweenMax.min.js"></script>
+  <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+  <!--Publicidad especulativa para farmacia Lider, los logos y diseños pertenecen a la marca.
+  -->
+<style>
+
+
+@import url(http://fonts.googleapis.com/css?family=Molengo);
+
+
+/*#banner {
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  width: 900px;
+  height: 90px;
+  border: none;
+  font: normal 16px/1 "Times New Roman", Times, serif;
+  color: rgba(255,255,255,1);
+  text-align: center;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  background: -webkit-linear-gradient(-90deg, rgba(249,249,249,1) 0, rgba(234,238,242,1) 100%);
+  background: -moz-linear-gradient(180deg, rgba(249,249,249,1) 0, rgba(234,238,242,1) 100%);
+  background: linear-gradient(180deg, rgba(249,249,249,1) 0, rgba(234,238,242,1) 100%);
+  background-position: 50% 50%;
+  -webkit-background-origin: padding-box;
+  background-origin: padding-box;
+  -webkit-background-clip: border-box;
+  background-clip: border-box;
+  -webkit-background-size: auto auto;
+  background-size: auto auto;
+}*/
+
+img { -ms-interpolation-mode:bicubic; }
+
+#banner {
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  width: 336px;
+  height: 280px;
+  border: none;
+  font: normal 16px/1 "Times New Roman", Times, serif;
+  color: rgba(255,255,255,1);
+  text-align: center;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  background: -webkit-linear-gradient(-90deg, #c50979 0, #e2367e 100%);
+  background: -moz-linear-gradient(180deg, #c50979 0, #e2367e 100%);
+  background: linear-gradient(180deg, #c50979 0, #e2367e 100%);
+  background-position: 50% 50%;
+  -webkit-background-origin: padding-box;
+  background-origin: padding-box;
+  -webkit-background-clip: border-box;
+  background-clip: border-box;
+  -webkit-background-size: auto auto;
+  background-size: auto auto;
+   
+background-color: #c50979;   
+	
+	 
+	position:relative;
+    overflow:hidden;
+}
+
+.oval {
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  width: 250px;
+  height: 250px;
+  border: 0px solid rgba(140,140,140,1);
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  font: normal 100%/normal Arial, Helvetica, sans-serif;
+  color: rgba(0,0,0,1);
+  -o-text-overflow: clip;
+  text-overflow: clip;
+  background: #f7f7f7;
+  -webkit-box-shadow: 2px 5px 22px 2px rgba(0,0,0,0.4) ;
+  box-shadow: 2px 5px 22px 2px rgba(0,0,0,0.4) ;
+  position:absolute;
+  overflow:hidden;
+  -ms-transform: scale(0.90,0.90);
+  transform: scale(0.90,0.90);
+  margin: 0 auto;
+  left:20px;
+}
+
+
+/*---lblCba---*/
+
+.cbaStamp
+{
+position:absolute;
+top:15%;
+left:20%;
+height:200px;
+width:200px;
+opacity:0;
+}
+
+.lbl100cba
+{
+position:absolute;
+font-family: 'Paytone One', sans-serif;
+font-size: 4.1em;
+overflow:hidden; 
+top:30%;
+left:5%;
+text-align:center;
+}
+.lblCordobesa
+{
+position:absolute;
+font-family: 'Paytone One', sans-serif;
+font-size: 1.5em;
+transform: translateY(100%);
+-ms-transform: translateY(100%);
+left:15%;
+top:15%;
+}
+
+.cbaTop 
+{
+top:0%;
+ position:absolute;
+}
+
+.cbaBottom 
+{
+
+position:absolute;
+top:80%;
+left:8%;
+}
+
+.selloTop 
+{
+ position:absolute;
+}
+
+.selloBottom 
+{
+ position:absolute;
+}
+
+.lbl100farmacia 
+{
+ position:absolute;
+}
+
+/*---logo---*/
+
+.logo
+{
+position: absolute;
+margin:0 auto;
+text-align:center;
+opacity:0;
+}
+
+.logoText
+{
+top:100px;
+left:80px;
+position: absolute;
+margin:0 auto;
+-ms-transform: scale(0.6,0.6);
+transform: scale(0.60,0.60);
+}
+
+.spheres
+{
+position:absolute;
+top:45px;
+left:175px;
+}
+
+.sphere
+{
+position:absolute;
+-ms-transform: scale(0.6,0.6);
+transform: scale(0.60,0.60);
+}
+
+.f
+{
+  top:0px;
+
+}
+
+.g
+{
+ top:15px;
+ left:50px;
+}
+
+.w
+{
+ top:25px;
+ left:30px;
+}
+
+.lblLider
+{
+display:inline;
+position:absolute;
+}
+
+.line
+{
+left:-20px;
+top:95px;
+width:300px;
+position:absolute;
+overflow:hidden;
+}
+
+.farmacias
+{
+top:120px;
+position:absolute;
+}
+
+
+/*---farmacia---*/
+
+
+.farmaciaStamp
+{
+opacity:0;
+left:10%;
+top:20%;
+width:200px;
+height:200px;
+position:absolute;
+-ms-transform: rotate(-15deg); /* IE 9 */
+-webkit-transform: rotate(-15deg); /* Safari */
+transform: rotate(-15deg);
+}
+
+.selloTop
+{
+top:0%;
+position:absolute;
+}
+
+.selloBottom
+{
+top:60%;
+position:absolute;
+-ms-transform: rotate(180deg); /* IE 9 */
+-webkit-transform: rotate(180deg); /* Safari */
+transform: rotate(180deg);
+}
+
+.lbl100farmacia
+{
+left:20%;
+top:20%;
+position:absolute;
+}
+
+
+.copyright
+{
+position: absolute;  
+overflow:hidden; 
+top:80%;
+width:100%;
+margin: 20 auto;
+font-family: 'Verdana', normal;
+font-size: 0.8em; 
+opacity: 0.8;
+}
+
+
+ 
+</style>
+
+</head>
+ 
+<body>
+
+<div id='banner'>
+
+<div class= 'cbaStamp'>
+ <div class='cbaTop'><img src="assets/cordoba_top.png"/></div>
+  <div class='lbl100cba'><p>100%</p></div>
+   <div class='lblCordobesa'><p>Cordobesa</p></div>
+ <div class='cbaBottom'><img src="assets/cordoba_bottom.png"/></div>
+</div>
+ 
+ 
+<div class= 'farmaciaStamp'>
+<div class='selloTop'><img src="assets/sello_top.png"/></div>
+<div class='lbl100farmacia'><img src="assets/farmacia.png"/></div>
+<div class='selloBottom'><img src="assets/sello_top.png"/></div>
+</div>
+
+
+<div class='logo'>
+ 
+<div class='oval'></div>
+  
+	<div class='spheres'>
+	 <div class='sphere f'><img src="assets/spheref.png"/></div>
+	 	 <div class='sphere g'><img src="assets/sphereg.png"/></div>
+		 	 <div class='sphere w'><img src="assets/spherew.png"/></div>
+	</div>
+	
+	<div class='logoText'>
+ <div class='lblLider'><img src="assets/lider.png"/></div>
+ <div class='line'><img src="assets/line.png"/></div>
+ <div class='farmacias'><img src="assets/farmacias.png"/></div>
+</div>
+
+ </div>
+
+<div class="copyright"><p>Diseño Especulativo de Banner para Farmacia Líder. ivan.angonoa@gmail.com.</p></div> 
+</div>
+
+</body>
+
+
+
+<script>
+$(document).ready(function(){
+
+var percents = {cba:0},
+lbl100cba = $(".lbl100cba"),
+lblLider = $(".lblLider"),
+sphere = $(".sphere"),
+line = $(".line"),
+farmacias = $(".farmacias"),
+oval = $(".oval"),
+logo = $(".logo"),
+logoText = $(".logoText"),
+cbaStamp = $(".cbaStamp"), 
+selloTop = $(".selloTop"),
+selloBottom = $(".selloBottom"), 
+farmaciaStamp = $(".farmaciaStamp"),
+lbl100farmacia = $(".lbl100farmacia");
+ 
+
+
+
+
+var master = new TimelineMax({repeat:-1, repeatDelay:0.5});
+
+master.add(cbaStampAnimation())
+.add(farmaciaStampAnimation(),"-=2")
+.add(logoAnimation(),"+=1");
+
+
+$("#square").click(function(){console.log("dick")});
+ 
+
+
+function updateText() {
+
+lbl100cba.text(Math.round(percents.cba) + "%");
+
+}
+
+
+function cbaStampAnimation() {
+var tl = new TimelineMax();
+
+tl.set(cbaStamp, {scale:4, autoAlpha:1});
+
+tl.to(percents,0.7,{cba:100, ease:Back.easeNone, onUpdate:updateText, onUpdateScope:this.parent})
+.to(cbaStamp, 0.4,{scale:1, ease:Quad.easeOut}, "-=0.8") 
+.to(cbaStamp, 5,{scale:0.5, ease:Quad.easeOut},"-=0.4") 
+.to(cbaStamp, 0.4,{left:"-100%", ease:Quad.easeOut},"-=3");
+
+return tl;
+}
+
+
+function farmaciaStampAnimation() {
+var tl = new TimelineMax();
+
+tl.set(farmaciaStamp, {scale:4});
+
+tl.to(farmaciaStamp, 0.4,{scale:1,autoAlpha:1, ease:Quad.easeOut})
+.to(selloTop, 0.4,{top:"20%", autoAlpha:0, ease:Quad.easeOut}, "+=3")
+.to(selloBottom, 0.4,{top:"40%", autoAlpha:0, ease:Quad.easeOut}, "-=0.4")
+/*.to(selloBottom, 1,{scale:0, autoAlpha:0, ease:Expo.easeOut}, "-=0.2")
+.to(selloTop, 1,{scale:0, autoAlpha:0, ease:Expo.easeOut}, "-=1")*/
+.to(lbl100farmacia, 0.4,{autoAlpha:0, ease:Quad.easeOut}, "-=0.5");
+
+return tl;
+}
+
+
+
+
+function logoAnimation() {
+var tl = new TimelineMax();
+
+tl.set(oval, {scale:0, borderRadius:"20% 20%", border:"0px solid rgba(140,140,140,1)"})
+.set([lblLider, sphere],{scale:0})
+.set(logo,{autoAlpha:1})
+.set(line,{width:0})
+.set(farmacias,{scaleY:0});
+
+tl.to(oval, 1, {scale:1, borderRadius:"50% 50%", border:"20px solid rgba(140,140,140,1)", ease:Expo.easeOut})
+.to(lblLider, 4,{scale:1, ease:Expo.easeOut}, "-0.1")
+.to(line, 0.5,{width:300, ease:Quad.easeNone}, "+0.5")
+.to(farmacias, 0.4,{scaleY:1, ease:Quad.easeNone}, "+0.6")
+.staggerTo(sphere,0.5, {scale:1, ease:Linear.easeOut }, 0.2, "+1.0")
+.to(logo,1, {autoAlpha:0, ease:Expo.easeOut }, "+=4.0");
+
+return tl;
+}
+
+});
+
+</script>
+</html>
+
+
+
