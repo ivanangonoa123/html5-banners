@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title> Test GreenSock SVG! </title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.16.1/TweenMax.min.js"></script>
+<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+<link href='http://fonts.googleapis.com/css?family=Play&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+<style>
+#square {
+	background-color:#CC0000;
+position: absolute;
+width:50px;
+height:50px;
+overflow:hidden;
+}
+
+#background {
+display:inline-block;
+position: relative;
+	-webkit-box-sizing: content-box;
+	-moz-box-sizing: content-box;
+	box-sizing: content-box;
+
+width:900px;
+height: 175px;
+
+font: normal 16px/1 "Times New Roman", Times, serif;
+color: rgba(255,255,255,1);
+	text-align: center;
+	-o-text-overflow: ellipsis;
+	text-overflow: ellipsis;
+background: -webkit-radial-gradient(closest-side, rgba(255,255,255,1) 0, rgba(255,255,255,1) 1%, rgba(222,222,222,1) 100%);
+background: -moz-radial-gradient(closest-side, rgba(255,255,255,1) 0, rgba(255,255,255,1) 1%, rgba(222,222,222,1) 100%);
+background: radial-gradient(closest-side, rgba(255,255,255,1) 0, rgba(255,255,255,1) 1%, rgba(222,222,222,1) 100%);
+	background-position: 50% 50%;
+	-webkit-background-origin: padding-box;
+	background-origin: padding-box;
+	-webkit-background-clip: border-box;
+	background-clip: border-box;
+	-webkit-background-size: auto auto;
+	background-size: auto auto;
+overflow:hidden;
+
+margin:0 auto;
+}
+
+#logo {
+display:inline-block;
+position: relative;  
+left:0%;
+width:100%;
+height:100%;
+}
+
+#brandigital {
+visibility:hidden;
+position: absolute;  
+width:600px;
+height:100px;
+overflow:hidden;
+left:25%;
+top:40%;
+}
+
+#circle{
+position: absolute; 
+width:100px;
+height:100px;
+float:left;
+left:10%;
+top:30%;
+}
+
+#spot {
+position: absolute; 
+float:left;
+left:5px;
+top:40px;
+width:20px;
+height:20px;   
+
+}
+
+#arrow {
+position: absolute; 
+float:left;
+left:30px;
+top:15px;
+width:60px;
+height:60px;
+
+}
+
+.boxy {
+visibility:hidden;
+position: absolute; 
+
+	-webkit-box-sizing: content-box;
+	-moz-box-sizing: content-box;
+	box-sizing: content-box;
+
+	z-index: auto;
+width: 455px;
+height: 200px; 
+cursor: default;
+opacity: 1;
+margin: 0;
+padding: 20px;
+overflow: hidden;
+border: none;
+	-webkit-border-radius: 0;
+	border-radius: 0;
+font: normal 16px/normal "Times New Roman", Times, serif;
+color: rgba(0,0,0,0.9);
+	-o-text-overflow: clip;
+	text-overflow: clip;
+background: #d37f47;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+	text-shadow: none;
+	-webkit-transition: none;
+	-moz-transition: none;
+	-o-transition: none;
+transition: none;
+	-webkit-transform:    skewX(-25deg);
+transform:    skewX(-25deg);
+	-webkit-transform-origin: 50% 50% 0;
+	transform-origin: 50% 50% 0;
+}
+
+
+.alpha {
+background: #d37f80;
+width:50%
+}
+
+.beta {
+background: #e09b70;
+width:20%
+}
+
+.gama {
+background: #c95844;
+width:15%
+}
+
+.tita {
+background: #2693bf
+width:15%
+
+}
+
+.rhodesia {
+width:20%
+background: #ea6d19;
+}
+</style>
+
+</head>
+
+<body>
+
+
+<div id="background">
+
+<div class="boxy alpha"></div>
+<div class="boxy beta"></div>
+<div class="boxy gama"></div>
+<div class="boxy tita"></div>
+<div class="boxy rhodesia"></div>
+<div id = "logo">
+
+<div id="brandigital">
+<object>
+<embed src ="brandigital.svg">
+</object>
+</div>
+
+
+<div id="circle">
+
+<object>
+<embed src ="circle.svg">
+</object>
+
+<div id="spot">
+<object>
+<embed src ="spot.svg">
+</object>
+</div>
+
+<div id="arrow">
+<object>
+<embed src ="arrow.svg">
+</object>
+</div>
+
+
+</div>
+
+
+
+</div>
+
+
+
+</div>
+
+
+<!--<div id='square'>-->
+
+</div>
+</body>
+
+
+
+<script>
+window.onload = function() {
+
+	var
+	background = $("#background"),
+	brandigital = $("#brandigital"),
+	circle = $("#circle"),
+	arrow = $("#arrow"),
+	spot = $("#spot");
+
+
+	var square = document.getElementById('square');
+
+
+	var tl = new TimelineMax( );
+	
+
+	tl.set(".boxy", {xPercent:-50, yPercent:0});
+	tl.set(".boxy", {x:1200, autoAlpha:1});
+	tl.set(brandigital, {autoAlpha:1});
+	
+
+	tl.staggerTo(".boxy", 0.5, {x:  -400, ease:SlowMo.ease.config(0.1, 0.2, false)}, 0.1)
+	.from(brandigital, 1,{x:-900, ease: Back.easeOut}, "-=0.3")
+	.from(circle, 0.5,{scale:0.8, autoAlpha:0, rotation:360, ease:Back.Out},"-=0.5")
+	.from(spot, 0.2,{ scale:0, autoAlpha:0,  ease:Elastic.InOut},"-=0.3")
+	.from(arrow, 0.3,{xPercent:-500,autoAlpha:0, ease:Elastic.InOut } ,"+=0.2");
+
+
+	tl.to('#square',10,{left:'500px'});
+
+
+	tl.play();
+}
+</script>
+</html>
+
+
+

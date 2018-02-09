@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link href='http://fonts.googleapis.com/css?family=Paytone+One' rel='stylesheet' type='text/css'> <link href='http://fonts.googleapis.com/css?family=Paytone+One' rel='stylesheet' type='text/css'> 
+<meta charset="utf-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Publicidad Html5 Quality Espacio</title>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.16.1/TweenMax.min.js"></script>
+  <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+  <link href='http://fonts.googleapis.com/css?family=Merriweather+Sans:400,800' rel='stylesheet' type='text/css'>
+  <!--Publicidad especulativa para Quality Espacio, los logos y diseños pertenecen a la marca.
+  -->
+<style> 
+  @import url(http://fonts.googleapis.com/css?family=Merriweather+Sans:400,800);
+img { -ms-interpolation-mode:bicubic; }
+
+#banner {
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  width: 970px;
+  height: 200px;
+  border: none;
+  font: normal 16px/1 "Times New Roman", Times, serif;
+  color: rgba(255,255,255,1);
+  text-align: center;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  background: -webkit-radial-gradient(closest-side, rgba(9,15,76,1) 0, rgba(9,15,76,1) 18%, rgba(0,0,0,1) 100%);
+  background: -moz-radial-gradient(closest-side, rgba(9,15,76,1) 0, rgba(9,15,76,1) 18%, rgba(0,0,0,1) 100%);
+  background: radial-gradient(closest-side, rgba(9,15,76,1) 0, rgba(9,15,76,1) 18%, rgba(0,0,0,1) 100%);
+  background-position: 50% 50%;
+  -webkit-background-origin: padding-box;
+  background-origin: padding-box;
+  -webkit-background-clip: border-box;
+  background-clip: border-box;
+  -webkit-background-size: auto auto;
+  background-size: auto auto;
+  
+  background-color: #020509;
+  position:relative;
+  overflow:hidden;
+   // margin: 0 auto;
+}
+	
+	  
+ 
+.oval {
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  width: 225px;
+  height: 225px;
+  border: 20px solid rgba(234,234,234,1);
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  font: normal 100%/normal Arial, Helvetica, sans-serif;
+  color: rgba(0,0,0,1);
+  -o-text-overflow: clip;
+  text-overflow: clip;
+  background: #322c2c;
+  
+  position:absolute;
+  overflow:hidden;
+  -ms-transform: scale(0.90,0.90);
+  transform: scale(0.90,0.90);
+  margin: 0 auto;
+  left:10%;  
+}
+
+.logo
+{
+position: absolute;
+margin:0 auto;
+text-align:center;
+opacity:100;
+   left:35%;
+   height:100%;
+   width:30%;
+	top:-10%;
+	z-index:100;
+}
+
+.logoText
+{
+top:15%;
+left:0%;
+position: absolute;
+margin:0 auto;
+/*ms-transform: scale(0.5,0.5);
+transform: scale(0.5,0.5);*/
+   height:100%;
+   width:100%;
+   
+}
+
+.lblQuality {
+position:absolute;
+top:0%;
+}
+
+.lblEspacio {
+position:absolute;
+ms-transform: scale(0.8,0.8);
+transform: scale(0.8,0.8);
+top:60%;
+left:20%;
+}
+
+.trigL {
+position:absolute;
+top:60%;
+left:10%;
+}
+
+.trigR {
+position:absolute;
+top:60%;
+left:100%;
+-ms-transform: rotate(180deg); /* IE 9 */
+-webkit-transform: rotate(180deg); /* Safari */
+transform: rotate(180deg);
+}
+ 
+
+.copyright
+{
+position: absolute;  
+overflow:hidden; 
+top:80%;
+width:100%;
+margin: 20 auto;
+font-family: 'Verdana', normal;
+font-size: 0.8em; 
+opacity: 0.8;
+}
+
+.gallery{
+position:absolute;
+width:100%;
+height:100%;
+}
+
+.galleryItem{
+  position:absolute;
+  width:20%;
+  overflow:hidden;
+  height:95%;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  border: 5px solid rgba(255,255,255,1);
+  font: normal 16px/1 "Times New Roman", Times, serif;
+  color: rgba(255,255,255,1);
+  text-align: center;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  -webkit-box-shadow: 0 1px 18px 3px rgba(0,3,5,0.5) inset;
+  box-shadow: 0 1px 18px 3px rgba(0,3,5,0.5) inset;
+  background-color:#fff;
+  
+  
+    -moz-user-select: -moz-none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+
+.galleryImg{
+  position:absolute;
+  overflow:hidden;
+  height:100%;
+  width:400px;	
+}
+
+.galleryDate{
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  border: none;
+  font-family: 'Merriweather Sans', sans-serif;
+  color: rgba(255,255,255,1);
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  font-size:30px;
+  text-shadow: 4px 4px 6px rgba(56,77,91,0.91) ;
+  position:absolute;
+  line-height:1px;
+  top:20%;
+  left:20%;
+}
+
+.galleryTitle{
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  border: none;
+  font-family: 'Merriweather Sans', sans-serif;
+  font-size:40px;
+  //line-height:40px;
+  color: rgba(0,0,0,1);
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  text-shadow: 4px 4px 6px rgba(56,77,91,0.8) ;
+  position:absolute;
+  width:250px;
+  top:-80%;
+  left:50%;
+  
+}
+
+.itemOval {
+  
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  width: 120px;
+  height: 120px;
+  border: none;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  font: normal 100%/normal Arial, Helvetica, sans-serif;
+  color: rgba(0,0,0,1);
+  -o-text-overflow: clip;
+  text-overflow: clip;
+  background: rgba(11,125,191,0.8);
+  -webkit-box-shadow: 3px 3px 4px 0 rgba(0,0,0,0.4) ;
+  box-shadow: 3px 3px 4px 0 rgba(0,0,0,0.4);
+  position:absolute;
+  top:50%;
+  left:-10%;
+  opacity:0;
+  ms-transform: scale(0.1,0.1);
+transform: scale(0.1,0.1);
+
+}
+
+
+-webkit-backface-visibility: hidden;
+
+img{
+  image-rendering: -moz-crisp-edges;
+    image-rendering: -o-crisp-edges;
+    image-rendering: -webkit-optimize-contrast;
+    -ms-interpolation-mode: nearest-neighbor;
+    image-rendering: pixelated;
+}
+
+</style>
+
+</head>
+ 
+<body>
+
+<div id='banner'>
+
+<div class='gallery'></div>
+
+<div class='logo'> 
+<div class='oval'></div>
+
+<div class='logoText'>
+ <div class='lblQuality'><img src="assets/logo_quality.png"/></div>
+ 
+ <div class='trigL'><img src="assets/trig.png"/></div>
+ <div class='trigR'><img src="assets/trig.png"/></div>
+ <div class='lblEspacio'><img src="assets/lbl_espacio.png"/></div>
+</div>
+</div>
+
+<div class="copyright"><p>Diseño Especulativo de Banner para Quality. ivan.angonoa@gmail.com.</p></div> 
+
+</div>
+
+</body>
+
+
+
+<script>
+$(document).ready(function(){
+
+var percents = {cba:0};
+
+var gallery = $('.gallery'),
+logo = $('.logo'),
+oval = $('.oval'),
+logoText = $('.logoText'),
+lblEspacio = $('.lblEspacio'),
+lblQuality = $('.lblQuality'),
+trigL = $('.trigL'),
+trigR = $('.trigR');
+ 
+galleryItems = [{name:'Soledad', date:'29/8', img:'assets/soledad.jpg', offsetx:-200, offsety:0},
+{name:'Joyriders', date:'19/9', img:'assets/joyriders.jpg',offsetx:0, offsety:0},
+{name:'Elsa <br> Entre hadas', date:'12/7', img:'assets/elsa.jpg',offsetx:-100, offsety:-110},
+{name:'Pedro Aznar', date:'19/9', img:'assets/aznar.jpg',offsetx:0, offsety:0},
+{name:'Tributo a Pink Floyd', date:'28/7', img:'assets/pink_f.jpg',offsetx:-400, offsety:0}];
+  
+
+var master = new TimelineMax({repeat:0, repeatDelay:0.5,onComplete:startGallery});
+master.add(logoAnimation());
+
+//startGallery(); 
+
+function logoAnimation() {
+var tl = new TimelineMax();
+
+tl.set([lblEspacio, lblQuality], {scale:0, autoAlpha:1})
+.set(trigL,{autoAlpha:0, left:"-40%" })
+.set(trigR,{autoAlpha:0, left:"150%"})
+.set(oval, {scale:0,   border:"0px solid rgba(234,234,234,1)"});
+
+tl.to(oval,0.5,{scale:1, border:"20px solid rgba(234,234,234,1)", ease:Expo.easeOut})
+.to(oval,2,{rotationY:"180", ease:Elastic.easeOut},"-=0.4")
+.to(lblQuality, 0.4,{scale:0.5, ease:Quad.easeOut}, "-=2") 
+.to(lblEspacio, 0.4,{scale:0.5, ease:Quad.easeOut}, "-=1.8") 
+.to(trigL, 0.4,{autoAlpha:1, left:"25%", ease:Quad.easeOut},"-=1.5") 
+.to(trigR, 0.4,{autoAlpha:1, left:"80%", ease:Quad.easeOut},"-=1.5")
+.set([trigL,trigR], {autoAlpha:0})
+.staggerTo([trigL,trigR], 1,{autoAlpha:1,ease:RoughEase.ease.config({ template: Power0.easeNone, strength: 1, points: 20, taper: "none", randomize: true, clamp: false})}, 0.2,"-=2")
+.to(logo, 0.5,{scale:0.2, left:"80%", top:"25%", ease:Expo.easeOut},"-=0.2");
+
+return tl;
+}
+ 
+function startGallery()
+{
+for(var i = 0; i<galleryItems.length; i++){
+ 
+ var g = new GalleryItem(galleryItems[i].name, galleryItems[i].date, galleryItems[i].img, gallery, i,  galleryItems.length, galleryItems[i].offsetx, galleryItems[i].offsety);
+ g.div.style.left = 100/galleryItems.length * i + "%";
+  
+  var tl = new TimelineMax();
+  
+ tl.set(g.div, {autoAlpha:0, top:i%2?"150%":"-100%"})
+ .to(g.div, 0.4, {autoAlpha:1, top:"0%", ease:Expo.easeOut}, "+=" + i* 0.1)
+ .to(g.div, 1, {fill:"#fff", ease:RoughEase.ease.config({ template: Power0.easeNone, strength: 1, points: 20, taper: "none", randomize: true, clamp: false})})
+ .to($(g.div).children('.itemOval'),1, {autoAlpha:1, scale:1, ease:Quad.easeOut},"-=1.2");
+}
+
+} 
+
+
+});
+
+function GalleryItem (title, date, img, stage, pos, itemsSize, offsetx, offsety)
+{
+	this.title = title;
+	this.date = date;
+	this.img = img;
+	this.offsetx = offsetx;	
+	this.offsety = offsety;	
+
+	this.div  = document.createElement('div');
+	this.div.className = "galleryItem";
+	
+	$(this.div).append('<div class="galleryImg"><img style="margin-left: '+offsetx+'px; margin-top: '+offsety+'px;" src="'+img+'"/></div>');
+		$(this.div).append('<div class="galleryTitle"><p>'+title+'</p></div>');
+		$(this.div).append('<div class="itemOval"><div class="galleryDate"><p>'+date+'</p></div></div>');
+	
+	$(stage).append(this.div);
+	
+	$(this.div).mouseenter({pos: pos, itemsSize: itemsSize},this.onHover);	 
+	$(this.div).mouseleave({pos: pos, itemsSize: itemsSize},this.onOut);	
+	
+	
+}
+	
+GalleryItem.prototype.onHover = function(event) {
+ TweenMax.set($(this), {zIndex:1});
+	TweenMax.to($(this), 0.6, {width:"100%", left:"0%", ease:Expo.easeOut});
+		TweenMax.to($(this).children('.itemOval'), 0.6, {  left:"80%", ease:Expo.easeOut});
+			TweenMax.to($(this).children('.galleryTitle'), 0.6, {  autoAlpha:1, top:"10%", ease:Expo.easeOut});
+};
+
+GalleryItem.prototype.onOut = function(event) {
+	TweenMax.to($(this), 0.3, {width:"20%",left:(100/event.data.itemsSize)*event.data.pos+"%", ease:Quad.easeOut,onCompleteScope:$(this), onComplete:function(){$(this).css("z-index",0);}});
+	   TweenMax.to($(this).children('.itemOval'), 0.6, {  left:"-10%", ease:Expo.easeOut});
+	   TweenMax.to($(this).children('.galleryTitle'), 0.6, {  autoAlpha:0,  top:"-80%",ease:Expo.easeOut});
+};
+
+</script>
+</html>
+
+
+

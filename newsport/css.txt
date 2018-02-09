@@ -1,0 +1,25 @@
+  
+<defs>
+	 <style>
+	 
+	 #logo{
+	 stroke-dasharray:800;
+  stroke-dashoffset:0;
+ 
+  -webkit-animation: dash 2s linear forwards;
+   -moz-animation: dash 2s linear forwards;
+    -o-animation: dash 2s linear forwards;
+	animation: dash 2s linear forwards;
+	}
+ 
+ @-webkit-keyframes dash{
+ from
+ {
+ stroke-dashoffset: 800;
+ }
+ to{
+ stroke-dashoffset:0;
+ }
+ }
+ </style>
+ </defs>*/

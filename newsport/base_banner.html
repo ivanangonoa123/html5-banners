@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.16.1/TweenMax.min.js"></script>
+  <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+  <link href='http://fonts.googleapis.com/css?family=Titillium+Web' rel='stylesheet' type='text/css'>
+<style>
+
+#banner{
+  position: relative;  
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  width: 336px;
+  height: 280px;
+  border: none;
+  font: normal 16px/1 "Times New Roman", Times, serif;
+  color: rgba(255,255,255,1);
+  text-align: center;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  background: -webkit-linear-gradient(0deg, rgba(100,100,100,1) 0, rgba(0,0,0,1) 100%), #0096ff;
+  background: -moz-linear-gradient(90deg, rgba(100,100,100,1) 0, rgba(0,0,0,1) 100%), #0096ff;
+  background: linear-gradient(90deg, rgba(100,100,100,1) 0, rgba(0,0,0,1) 100%), #0096ff;
+  background-position: 50% 50%;
+  -webkit-background-origin: padding-box;
+  background-origin: padding-box;
+  -webkit-background-clip: border-box;
+  background-clip: border-box;
+  -webkit-background-size: auto auto;
+  background-size: auto auto;
+  overflow:hidden;
+  }
+   
+  .ball {
+  position: absolute;  
+  overflow:hidden; 
+  text-align:center;
+  margin: 0 auto;
+  }
+  
+  .soccer
+  {
+  top: 300px;
+  left: 10px;
+  }
+
+  .basket
+  {
+  top: -300px;
+  left: 115px;
+  }
+  
+  .tennis
+  {
+  top: 300px;
+  left: 225px;
+  }
+  
+  .credicard
+  {
+  left:-200px;
+  top:100px;
+  position: absolute;  
+ 
+  }
+  
+  .label1{
+  top:400px;
+  left:60px;
+  text-align:center;
+  margin: 0 auto;
+  position:absolute;
+  }
+  
+  .label2{
+  left:80px;
+  top:-200px;
+  text-align:center;
+  margin: 0 auto;
+  position:absolute;
+  }
+  
+  .label3{
+  left:50px;
+  top:400px;
+  text-align:center;
+  margin: 0 auto;
+  position:absolute;
+  }
+  
+  
+  .pin
+  {
+  position: absolute; 
+  transform: scale(0,0); 
+  }
+  
+  .bluestrip
+  {
+  position:absolute;
+  width:100%
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  width: 336px;
+  height: 90px;
+  border: none;
+  font: normal 100%/normal Arial, Helvetica, sans-serif;
+  color: rgba(255,255,255,1);
+  -o-text-overflow: clip;
+  text-overflow: clip;
+  background: -webkit-linear-gradient(-90deg, #78ACDE 0, #aeccf2 100%);
+  background: -moz-linear-gradient(180deg, #78ACDE 0, #aeccf2 100%);
+  background: linear-gradient(180deg, #78ACDE 0, #aeccf2 100%);
+  background-position: 50% 50%;
+  -webkit-background-origin: padding-box;
+  background-origin: padding-box;
+  -webkit-background-clip: border-box;
+  background-clip: border-box;
+  -webkit-background-size: auto auto;
+  background-size: auto auto;
+  transform: scaleX(0);
+  transform-origin: left 0%;
+  }
+  
+  .flag
+  {
+  position: absolute;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  width: 336px;
+  height: 280px;
+  border: none;
+  font: normal 100%/normal Arial, Helvetica, sans-serif;
+  color: rgba(255,255,255,1);
+  -o-text-overflow: clip;
+  text-overflow: clip;
+  background: -webkit-linear-gradient(-90deg, rgba(255,255,255,1) 0, rgba(200,200,200,1) 100%);
+  background: -moz-linear-gradient(180deg, rgba(255,255,255,1) 0, rgba(200,200,200,1) 100%);
+  background: linear-gradient(180deg, rgba(255,255,255,1) 0, rgba(200,200,200,1) 100%);
+  background-position: 50% 50%;
+  -webkit-background-origin: padding-box;
+  background-origin: padding-box;
+  -webkit-background-clip: border-box;
+  background-clip: border-box;
+  -webkit-background-size: auto auto;
+  background-size: auto auto;
+  opacity: 0.0;
+  }
+  
+  .oval {
+  position: absolute;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  width: 336px;
+  height: 336px;
+  border: none;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  font: normal 100%/normal Arial, Helvetica, sans-serif;
+  color: rgba(0,0,0,1);
+  -o-text-overflow: clip;
+  text-overflow: clip;
+  background: #af2723;
+  transform: scale(0,0);
+}
+  
+  p {
+  font-family: 'Titillium Web', sans-serif;
+  font-size: 1.5em; 
+  }
+
+  #n {
+  position: absolute;
+  width:200px; 
+  margin:0 auto;
+  top:45%;
+  left:20%;
+	visibility:hidden;
+  }  
+  
+  img{
+    -khtml-user-select: none;
+    -o-user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+.copyright
+{
+position: absolute;  
+overflow:hidden; 
+top:70%;
+width:100%;
+margin: 20 auto;
+font-family: 'Verdana', normal;
+font-size: 0.8em; 
+opacity: 0.8;
+}
+
+
+</style>
+
+</head>
+ 
+<body>
+
+
+<div id='banner'>
+<div class="flag"></div>
+<div class="oval 2" style="background-color:#a52c2c"></div>
+<div class="oval 3" style="background-color:#ce5050"></div>
+<div class="oval 1" style="background-color:#af2723"></div>
+
+<div class="bluestrip 1"></div>
+<div class="bluestrip 2" style= "top:200px"></div>
+
+<div id='n'>
+<object>
+<embed id='svg' src='assets/newsport.svg'>
+</object> 
+</div>
+
+<div class="label1"><p>Todos los deportes</p></div>
+<div class="label2"><p>Todas las tarjetas</p></div>
+<div class="label3" style="color:#444"><p>Envíos a todo el país</p></div>
+
+<div class="ball soccer"><img  src="assets/soccer.png"></> </div>
+<div class="ball basket"><img  src="assets/basket.png"></> </div>
+<div class="ball tennis"><img  src="assets/tennis.png"></> </div> 
+
+<div class="credicard visa"><img  src="assets/visa.png"></> </div>
+<div class="credicard pagofacil"><img  src="assets/pagofacil.png"></> </div>
+<div class="credicard banelco"><img  src="assets/banelco.png"></> </div>
+<div class="credicard master"><img  src="assets/master.png"></> </div>
+
+<div class="pin 1" style="top:100px; left:200px"><img  src="assets/pin.png"></> </div>
+<div class="pin 2" style="top:10px; left:20px"><img  src="assets/pin.png"></> </div>
+<div class="pin 3" style="top:90px; left:40px"><img  src="assets/pin.png"></> </div>
+<div class="pin 4" style="top:40px; left:150px"><img  src="assets/pin.png"></> </div>
+<div class="pin 5" style="top:90px; left:60px"><img  src="assets/pin.png"></> </div>
+<div class="pin 6" style="top:180px; left:20px"><img  src="assets/pin.png"></> </div>
+<div class="pin 7" style="top:160px; left:150px"><img  src="assets/pin.png"></> </div>
+<div class="pin 8" style="top:140px; left:200px"><img  src="assets/pin.png"></> </div>
+<div class="pin 9" style="top:170px; left:250px"><img  src="assets/pin.png"></> </div>
+<div class="pin 10" style="top:160px; left:220px"><img  src="assets/pin.png"></> </div>
+ 
+ 
+ <div class="copyright"><p>Diseño Especulativo de Banner para Newsport. ivan.angonoa@gmail.com.</p></div> 
+</div>
+</div>
+
+</body>
+
+
+
+<script>
+window.onload = function() {
+
+var n = $("#n"),
+logo = $("#logo"),
+ewsport = $("#ewsport"),
+label1 =  $(".label1");
+
+var tl = new TimelineMax({delay:0.5,repeat:99, repeatDelay:2});
+ 
+
+tl
+
+
+ //Todos los deportes
+.to($(".basket"), 2, {top:100, rotationZ:360, ease:Bounce.easeOut})
+.to($(".soccer"), 1, {top:100, rotationZ:400, ease:Back.Out},"-=1.8")
+.to($(".tennis"), 1.4, {top:100, rotationZ:-960, ease:Back.easeOut},"-=1.5")
+.to($(".label1"), 0.5, {top:220, ease:Back.Out}, "-=2")
+.set($(".label1"), {top:220, ease:Back.Out}, "+=0.5")
+.to($(".label1"), 1, {top:300,autoAlpha:0, ease:Back.In}) 
+.staggerTo($(".ball"), 2, {left:-200,autoAlpha:0, ease:Elastic.easeOut}, 0.2)
+
+//Todas las tarjetas
+.staggerTo($(".credicard"),0.8, {left:350, ease:SlowMo.ease.config(0.2, 0.5, false) }, 0.5)
+.to($(".label2"), 0.5, {top:20, ease:Back.Out}, "-=2")
+.to($(".label2"), 1, {top:-100, autoAlpha:0, ease:Back.In})
+ 
+
+//Todo el país
+.to($(".flag"), 0.1, {autoAlpha:1, ease:Back.EaseOut})
+.staggerTo($(".bluestrip"), 0.4, {scaleX:1, autoAlpha:1, ease:Back.EaseOut},0.4)
+.staggerTo($(".pin"),0.8, {scaleX:1, scaleY:1, ease:Elastic.easeOut.config(1, 0.3)}, 0.2, "-=0.6")
+.to($(".label3"), 0.5, {top:220, ease:Back.Out}, "-=2")
+.set($(".label3"), {top:220, ease:Back.Out}, "+=2")
+.to($(".pin"),0.5, {scaleX:0, scaleY:0, ease:Elastic.easeOut.config(1, 1)}, "-=0.4")
+.to($(".label3"), 0.2, {top:300,autoAlpha:0, ease:Back.In}) 
+.to($(".bluestrip"), 0.3, {autoAlpha:0, ease:Back.EaseOut})
+
+//Newsport
+.set(n, {rotationY:90})
+.staggerTo($(".oval"),3, {scaleX:2, scaleY:2, ease:Elastic.easeOut.config(0.5, 0.3)}, 0.1)
+.to(n, 1.8,{rotationY:0, autoAlpha:1,  transformOrigin:"0% 50%", ease: Back.easeOut}, "-=2")
+
+  
+
+ 
+
+tl.play();
+ }
+</script>
+</html>
+
+
+

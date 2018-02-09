@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Banner Arcor Logo</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.16.1/TweenMax.min.js"></script>
+<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+<link href='http://fonts.googleapis.com/css?family=Radley' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Alegreya+Sans+SC:800' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<style>
+//Publicidad especulativa para Arcor realizada por Boris Angonoa ivan.angonoa@gmail.com 2015
+
+#square {
+background-color:#CC0000;
+position: absolute;
+width:50px;
+height:50px;
+overflow:hidden;
+}
+
+img, p, .starfield, .arcorCircle{
+-khtml-user-select: none;
+-o-user-select: none;
+-moz-user-select: none;
+-webkit-user-select: none;
+user-select: none;
+}
+
+.banner {
+background-color: #0d3e7a;
+position: relative;  
+-webkit-box-sizing: content-box;
+-moz-box-sizing: content-box;
+box-sizing: content-box;
+width: 336px;
+height: 280px;
+border: none;
+font: normal 16px/1 "Times New Roman", Times, serif;
+color: rgba(255,255,255,1);
+text-align: center;
+-o-text-overflow: ellipsis;
+text-overflow: ellipsis;
+background: -webkit-radial-gradient(closest-side, #0d3e7a 0, #0d3e7a 1%, #082349 100%);
+background: -moz-radial-gradient(closest-side, #0d3e7a 0, #0d3e7a 1%, #082349 100%);
+background: radial-gradient(closest-side, #0d3e7a 0, #0d3e7a 1%, #082349 100%);
+background-position: 50% 50%;
+-webkit-background-origin: padding-box;
+background-origin: padding-box;
+-webkit-background-clip: border-box;
+background-clip: border-box;
+-webkit-background-size: auto auto;
+background-size: auto auto;
+overflow:hidden; 
+}
+
+
+.arcorCircle {
+background-color: #0263e6;
+position:absolute;  
+ -moz-box-shadow: 0 0 5px #fff;
+-webkit-box-shadow: 0 0 5px #fff;
+box-shadow: 0px 0px 5px #fff;
+
+-webkit-box-sizing: content-box;
+-moz-box-sizing: content-box;
+box-sizing: content-box;
+width: 321px;
+height: 222px;
+border: 5px solid #e9b729;
+-webkit-border-radius: 50%;
+border-radius: 50%;
+font: normal 100%/normal Arial, Helvetica, sans-serif;
+color: rgba(0,0,0,1);
+-o-text-overflow: clip;
+text-overflow: clip;
+background: -webkit-linear-gradient(-90deg, #011473 0, #066ef5 100%);
+background: -moz-linear-gradient(180deg, #011473 0, #066ef5 100%);
+background: linear-gradient(180deg, #011473 0, #066ef5 100%);
+background-position: 50% 50%;
+-webkit-background-origin: padding-box;
+background-origin: padding-box;
+-webkit-background-clip: border-box;
+background-clip: border-box;
+-webkit-background-size: auto auto;
+background-size: auto auto;
+opacity: 1.0;
+transform-origin: top left;
+transform: scale(0.34, 0.34);
+-ms-transform: scale(0.34,0.34);
+text-align:center;
+top:18%;
+ left: 34%;
+margin: 0 auto;
+}
+
+.arcorText{
+position: absolute;  
+overflow:hidden; 
+}
+
+.arcorArc{
+position: absolute;  
+overflow:hidden; 
+}
+
+.earth{
+position: absolute;  
+width:350px;
+height:350px;
+top:150%;
+overflow:hidden; 
+ pointer-events: none;
+}
+
+.particle{
+position: absolute;  
+
+}
+.starfield{
+width:100%;
+height:100%;
+position: absolute;  
+overflow:hidden; 
+text-align:center;
+}
+
+#mySvg
+{
+width:100%;
+height:100%;
+position: absolute;  
+overflow:hidden; 
+}
+
+p {
+//font-family: 'Alegreya Sans SC', sans-serif;
+//font-family: 'Radley', serif;
+font-size: 1.2em; 
+ 
+}
+
+.label
+{
+position: absolute;  
+overflow:hidden; 
+top:42%;
+width:100%;
+margin: 0 auto;
+cursor: pointer;
+font-family: 'Pacifico', cursive;
+}
+
+.copyright
+{
+position: absolute;  
+overflow:hidden; 
+top:80%;
+width:100%;
+margin: 0 auto;
+font-family: 'Verdana', normal;
+font-size: 0.8em; 
+opacity: 0.8;
+}
+
+#hand
+{
+position: absolute;  
+overflow:hidden; 
+width:50px;
+height:100px;
+left:10px;
+top:10px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+
+<div class="banner">
+
+
+<div id='hand'>
+<object>
+<embed  src='assets/hand_icon.svg'>
+</object> 
+</div>
+
+
+
+
+<div class="starfield">
+<svg width ="336" height="280" id="mySVG" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"></svg>
+</div>
+
+
+<div class="label"><p>Le damos sabor al mundo</p></div> 
+
+<div class="arcorCircle">
+<div class="arcorText"><img src="assets/texto_arcor.png"/></div>
+<div class="arcorArc"><img src="assets/arco_arcor.png"/></div> 
+</div>
+
+<div class="earth">
+<object>
+<embed src='assets/arcor_earth.svg'>
+
+
+</object> 
+</div>
+<div class="copyright"><p>Diseño Especulativo para Arcor ivan.angonoa@gmail.com</p></div> 
+<!--<img  draggable="false" src="assets/arcor_earth.png"/></div>-->
+
+
+</div>
+
+
+
+
+</body>
+
+
+
+<script>
+$(document).ready(function(){
+
+
+	var
+	banner = $(".banner"),
+	earth = $(".earth");
+	arcorCircle = $(".arcorCircle"),
+	hand = $("#hand"),
+	label = $(".label"),
+	starfield = $("#mySVG");
+	
+	earth.attr('unselectable', 'on');
+
+	//init
+	
+
+	var tl = new TimelineMax();
+	
+	tl.set(earth, {top:"150%"});
+	
+	tl.to(earth, 1.5 , {top:"60%", ease:Back.easeOut })
+		.from(arcorCircle, 1.2, {top:"-50%", ease:Expo.easeOut}, "-=1.2")
+			.from(label, 1.2, {top:"-20%", ease:Expo.easeOut} , "-=1.1");
+	tl.play();
+	
+	
+	
+	TweenMax.to(hand, 1, {autoAlpha:0.6 ,ease:Linear.easeOut, repeat:-1, yoyo:true});
+	TweenMax.to(earth, 24, {rotation:"360", ease:Linear.easeNone, repeat:-1});
+ 
+ 
+	//events
+ 
+	$(banner).mouseenter(function(event){
+
+		TweenMax.to(hand, 0.3, {autoAlpha:0, ease:Linear.easeNone});
+	});
+	
+	
+	$(banner).mouseleave(function(event){
+		 
+		TweenMax.to(hand, 0.3, {autoAlpha:1, ease:Linear.easeOut});		
+		TweenMax.to(hand, 1, {autoAlpha:0.6 ,ease:Linear.easeOut, repeat:-1, yoyo:true});
+
+	});
+	 
+
+	$(document).click(function(event){
+
+		var p = new Particle(banner, event.pageX, event.pageY, tl);
+
+	});
+	
+	//starfield
+	
+	for(var i = 0; i<60; i++){
+		
+		var radius = Math.random()*2+1;
+		
+		var star = document.createElementNS("http://www.w3.org/2000/svg", "circle"); 
+		
+		star.setAttribute('style', "position:absolute;");
+		star.setAttributeNS(null,"id","star"+i);
+		star.setAttributeNS(null,"cx",Math.random()*banner.width());
+		star.setAttributeNS(null,"cy",-50);
+		star.setAttributeNS(null,"r",radius);
+		star.setAttributeNS(null,"fill","#a5c9eb");
+		
+		TweenMax.to($(star), Math.random()*2+0.8, {  y:Math.random()*banner.height(), ease:Expo.easeOut});
+		TweenMax.to($(star), Math.random()*2+0.8, {scale: 0.5, transformOrigin:"50% 50%" ,ease:Linear.easeNone, repeat:-1, yoyo:true});
+		document.getElementById("mySVG").appendChild(star);
+	}
+	
+	
+	var Particle = function(stage, x, y){
+		
+		this.sprite = document.createElement('div'); 
+		this.sprite.className = "particle";
+		
+		var r  = Math.random();
+		
+		
+		if(r<= 0.2) { 
+			$(this.sprite).append('<img src="assets/bonobon.png"/>');
+		}
+		else if(r <= 0.5){
+			$(this.sprite).append('<img src="assets/saladix.png"/>');
+		}				
+		else if(r<= 0.8){
+			$(this.sprite).append('<img src="assets/topline.png"/>');
+		}
+		else
+		{
+			$(this.sprite).append('<img src="assets/cofler.png"/>');
+		}
+
+		stage.append(this.sprite);
+		$(this.sprite).css({top: y-20, left: x-20});
+		
+		var tl = new TimelineLite();
+		
+		
+		tl.set($(this.sprite), {scaleX: 0.1, scaleY:0.1, autoAlpha:1});
+	 
+		tl.to($(this.sprite), 2,{scaleX:1,scaleY:1, ease:Elastic.easeOut})
+		tl.to($(this.sprite),5,{y: 250,  autoAlpha:0.8, scaleX:0.2, scaleY:0.2, ease:Quad.easeOut, onComplete:this.removeParticle, onCompleteScope:this.parent, onCompleteParams:[this]},"-=1.8");
+		TweenMax.to($(this.sprite),Math.random()*2+2 , {rotation:Math.random()<=0.5? "360" : "-360", ease:Linear.easeNone, repeat:-1});
+		
+		
+	}
+	
+	Particle.prototype = {
+	constructor: Particle			
+	};
+	
+	Particle.prototype.removeParticle = function(p){
+		p.sprite.remove(); 
+		//p.remove();
+	}
+});
+
+
+
+</script>
+</html>
+
+
+
